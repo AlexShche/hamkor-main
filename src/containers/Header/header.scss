@@ -1,0 +1,58 @@
+@import "src/css/variables";
+
+header {
+  top: 0;
+  z-index: 9;
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+
+  h3 {
+    margin-bottom: 0;
+    font-size: $bigFontSize;
+    font-weight: $bold;
+  }
+
+  svg {
+    margin: auto;
+    width: 18px;
+    height: 18px;
+  }
+
+  .back {
+    display: flex;
+    padding: 0;
+    border: 0;
+    background: transparent !important;
+    margin-right: 28px;
+
+    a{
+      margin: auto;
+      display: flex;
+    }
+
+    svg{
+      fill: $mainGreen
+    }
+  }
+
+  .search_btn {
+    margin-left: auto;
+    display: flex;
+    padding: 0;
+    border-color: $mainGreen;
+    background: $mainGreen;
+    min-width: 36px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+
+    svg{
+      fill: #fff;
+    }
+  }
+}

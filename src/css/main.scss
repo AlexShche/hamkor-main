@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import "variables";
+
+body{
+  color: $defaultColor;
+  font-size: $defaultFontSize;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: $defaultColor;
+}
+
+h1{
+  font-size: $h1;
+  font-weight: $bold;
+}
+
+h2{
+  font-weight: $bold;
+  font-size: $h2;
+  margin-bottom: 10px;
+}
+
+#root, .App{
+  height: 100%;
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  color: #fff;
+  background: $mainGreen;
+  border-color: $mainGreen;
+}
+
+.ant-btn:hover, .ant-btn:focus {
+  color: #fff;
+  background: $mainGreen;
+  border-color: $mainGreen;
+}
+
+.buttonPlus{
+  right: 0;
+  position: absolute;
+  border-color: #CED7E0;
+  background: #CED7E0;
+  min-width: 42px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+  svg{
+    fill: #fff;
+    margin: auto;
+    height: 22px;
+    width: 22px;
+  }
+}
+
+.default_button{
+  margin-top: 24px;
+  height: 52px;
+  border-color: $mainGreen;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  width: 100%;
+  background: $mainGreen;
+  border-radius: $defaultBorderRadius;
+}
+
+.navigation {
+  position: absolute;
+  width: calc(100% - 32px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 16px;
+
+  .dots {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    margin: 0 auto 24px;
+
+    div {
+      border-radius: 50%;
+      background: #C4C4C4;
+      width: 8px;
+      height: 8px;
+    }
+
+    div:nth-child(2) {
+      margin: 0 0 0 8px;
+    }
+
+    .active {
+      background: $mainGreen;
+    }
+  }
+}
+
+.next-btn {
+  border-radius: $defaultBorderRadius;
+  font-size: 15px;
+  color: #fff;
+  height: 52px;
+  background: $mainGreen;
+  width: 100%;
+}
+
+.next-btn:hover {
+  color: #fff;
+  background: $mainGreen;
+}
+
+.ant-slider-rail, .ant-slider-track {
+  height: 2px;
+}
+
+.ant-slider:hover .ant-slider-track, .ant-slider-track {
+  background-color: $mainGreen;
+}
+
+.ant-slider-handle, .ant-slider-handle:focus {
+  margin-top: -12px;
+  height: 24px;
+  width: 24px;
+  border: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+  border-color: $mainGreen;
+}
+
+.ant-slider {
+  width: 96%;
+  margin: 10px auto 6px;
+}
+
+.ant-slider-rail{
+  background: #D6D6D6;
+}

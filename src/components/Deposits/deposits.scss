@@ -1,0 +1,67 @@
+@import "src/css/variables";
+
+.inline_cards {
+  margin-top: 20px;
+
+  .success_payment{
+    color: $mainGreen
+  }
+
+  .failed_payment{
+    color: $error
+  }
+
+  .cards {
+
+    .cards_card {
+      line-height: 18px;
+      color: #fff;
+      background: $defaultColor;
+      border-radius: $middleBorderRadius;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      font-weight: $bold;
+      margin-bottom: 4px;
+
+      .name{
+        margin-left: 10px;
+
+        .inner{
+
+          span{
+            display: block;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .sum{
+        text-align: right;
+        color: $mainGreen;
+        margin-left: auto;
+        font-size: $h2;
+      }
+
+      .icon{
+        display: flex;
+        background: $mainGreen;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+
+        svg{
+          margin: auto;
+          fill: #fff;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .cards_card:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

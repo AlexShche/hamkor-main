@@ -1,0 +1,30 @@
+@import "src/css/variables";
+
+.catalog-products{
+  height: 100%;
+  background: $bgColor;
+  padding: 60px 16px 0;
+
+  .inline_cards {
+
+    .cards {
+
+      .cards_card {
+        line-height: 18px;
+        color: $defaultColor;
+        background: #fff;
+
+        a{
+          color: $defaultColor;
+        }
+
+        .name{
+
+          .inner{
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

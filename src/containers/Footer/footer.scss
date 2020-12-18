@@ -1,0 +1,47 @@
+@import "src/css/variables";
+
+footer{
+  padding: 10px 12px 24px;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  width: 100%;
+
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    .active{
+
+      a{
+        color: $mainGreen;
+      }
+
+      svg{
+        fill: $mainGreen
+      }
+    }
+
+    li{
+      text-align: center;
+      width: 100%;
+    }
+
+    a{
+      font-size: $smallerFontSize;
+      font-weight: 500;
+      color: $defaultColor
+    }
+  }
+
+  svg{
+    margin: auto;
+    display: block;
+    fill: $defaultColor;
+    width: 18px;
+    height: 18px;
+  }
+}

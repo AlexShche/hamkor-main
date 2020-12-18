@@ -1,0 +1,159 @@
+@import "src/css/variables";
+
+.tabsCards {
+
+  .ant-tabs-nav{
+    padding: 0 16px;
+  }
+
+  .buttonPlus{
+    position: static;
+  }
+
+  .ant-row{
+    overflow-y: scroll;
+    flex-flow: unset;
+  }
+
+  .ant-tabs-ink-bar {
+    display: none;
+  }
+
+  .ant-tabs-top > .ant-tabs-nav::before {
+    border-bottom: 0;
+  }
+
+  .ant-tabs-top > .ant-tabs-nav {
+    margin-bottom: 0;
+  }
+
+  .ant-tabs-tab {
+    font-weight: $bold;
+    color: $grey;
+    margin: 0 10px 0 0;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $defaultColor;
+    font-weight: $bold;
+  }
+
+  .ant-tabs-tab-btn:focus, .ant-tabs-tab-remove:focus, .ant-tabs-tab-btn:active, .ant-tabs-tab-remove:active {
+    color: $defaultColor;
+  }
+
+  .general-balance {
+    margin: 0 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: $middleBorderRadius;
+    padding: 12px;
+    background: $defaultColor;
+    color: #fff;
+    font-weight: $bold;
+
+    span {
+      text-align: right;
+      color: $mainGreen;
+      margin-left: auto;
+      font-size: 17px;
+    }
+
+    .coins {
+      display: flex;
+      align-items: center;
+      background: $mainGreen;
+      min-width: 36px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 8px;
+
+      svg {
+        margin: auto;
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+      }
+    }
+  }
+
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cards {
+    padding: 0 16px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 12px;
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+
+    .button_wrapper{
+      display: flex;
+      padding-right: 16px;
+    }
+
+    .cards_card {
+      color: #fff;
+      padding: 12px;
+      border-radius: $middleBorderRadius;
+      margin-right: 12px;
+      min-width: 40%;
+
+      svg {
+        fill: #fff;
+        width: 18px;
+        height: 20px;
+      }
+
+      .visa{
+        width: 32px;
+      }
+    }
+
+    .green {
+      background-image: url("../../images/green.png");
+    }
+
+    .dark {
+      background-image: url("../../images/dark.png");
+    }
+
+    .yellow {
+      background-image: url("../../images/yellow.png");
+    }
+
+    .head {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: auto;
+        font-weight: $bold;
+      }
+    }
+
+    .cards_last_digits {
+      margin: 12px 0 20px;
+      font-size: $smallFontSize;
+    }
+
+    .balance {
+      height: 24px;
+      line-height: 12px;
+      font-weight: $bold;
+    }
+  }
+
+  .all_cards{
+    margin-left: 16px;
+    display: block;
+    margin-top: 12px;
+    font-weight: $bold;
+    color: $mainGreen
+  }
+}

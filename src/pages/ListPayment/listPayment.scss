@@ -1,0 +1,40 @@
+@import "src/css/variables";
+
+.ListPayment{
+  position: relative;
+  height: 100%;
+
+  .ant-collapse-content-box{
+    p{
+      display: flex;
+      letter-spacing: -0.154px;
+      color: #263D4C;
+      margin-bottom: 15px;
+
+      span:last-child{
+        margin-left: auto;
+      }
+    }
+  }
+
+  .ant-collapse {
+    border: none;
+  }
+
+  .ant-collapse-extra p {
+    margin-bottom: 0;
+  }
+
+  .ant-collapse > .ant-collapse-item {
+    border-bottom: 1px solid #F4F7FA;
+  }
+
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    background-color: #fff;
+  }
+
+  .ant-collapse-content {
+    border-top: 1px solid #F4F7FA;
+  }
+
+}

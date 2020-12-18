@@ -1,0 +1,57 @@
+@import "src/css/variables";
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  input {
+    font-size: $middleFontSize;
+  }
+
+  button {
+    display: flex;
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
+    border-color: $mainGreen;
+    background: $mainGreen;
+    margin-left: 8px;
+
+    svg{
+      margin: auto;
+      fill: #fff;
+      width: 18px;
+      height: 22px;
+    }
+  }
+
+  .ant-input-affix-wrapper {
+    background: rgb(246, 246, 246);
+    padding: 4.5px 13px;
+    border: 1px solid transparent;
+    border-radius: $defaultBorderRadius;
+
+    .ant-input-prefix {
+      margin-right: 10px;
+    }
+
+    input::-webkit-input-placeholder {
+      color: $grey;
+    }
+    input:-ms-input-placeholder {
+      color: $grey;
+    }
+    input::placeholder {
+      color: $grey;
+    }
+
+    svg{
+      fill: $grey;
+    }
+
+    input {
+      background: rgb(246, 246, 246);
+    }
+  }
+}

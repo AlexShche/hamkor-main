@@ -1,0 +1,19 @@
+@import "src/css/variables";
+
+.SpecialAbilities {
+
+  h2 {
+    margin-top: 12px;
+  }
+
+  .cards_card{
+
+    .icon{
+      background: $mainYellow !important;
+    }
+
+    .sum{
+      color: $mainYellow !important;
+    }
+  }
+}

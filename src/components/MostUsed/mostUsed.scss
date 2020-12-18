@@ -1,0 +1,41 @@
+@import "src/css/variables";
+
+.most-used{
+
+  .cards{
+    width: 208px;
+    position: relative;
+
+    .buttonPlus{
+      right: -52px;
+    }
+  }
+
+  .most-used_card{
+    padding: 12px;
+    border-radius: $middleBorderRadius;
+    background: #fff;
+
+    .icon{
+      display: flex;
+      width: 36px;
+      height: 36px;
+      background: $mainYellow;
+      border-radius: 50%;
+
+      svg{
+        margin: auto;
+        width: 18px;
+        height: 18px;
+        fill: #fff;
+      }
+    }
+
+    p{
+      line-height: 12px;
+      font-size: $smallerFontSize;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+  }
+}
