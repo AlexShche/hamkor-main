@@ -27,7 +27,7 @@ const Calculator = () => {
     const [month, setMonth] = useState(3)
     const [typePayment, setTypePayment] = useState("annuity")
     const [creditView, setCreditView] = useState(796229)
-    const [success, setSuccess] = useState(false)
+    const [success, setSuccess] = useState(true)
     const [creditId, setCreditId] = useState(0)
     const [loading, setLoading] = useState(false)
     const [creditInputLetter, setCreditInputLetter] = useState(false)
@@ -200,8 +200,10 @@ const Calculator = () => {
 
     return (
         <>
-            {!showList && <Header title="Онлайн кредит" linkBack="/catalog"/>}
-            <div className="calculator">
+            {
+                !showList && (!success && <Header title="Онлайн кредит" linkBack="/catalog"/>)
+            }
+            <div className={`${success ? "" : "calculator"}`}>
                 {
                     success ? <Success creditId={creditId}/> :
                         <>
@@ -212,7 +214,8 @@ const Calculator = () => {
                                         <Form className={"container"}>
                                             <h2 className={"title"}>Калькулятор</h2>
 
-                                            <div className={`params ${creditInputInvalid || creditInputLetter ? "invalid_credit" : ""}`}>
+                                            <div
+                                                className={`params ${creditInputInvalid || creditInputLetter ? "invalid_credit" : ""}`}>
                                                 <div className="item">
                                                     <span className="param_name sum">
                                                         Сумма кредита
@@ -239,7 +242,8 @@ const Calculator = () => {
                                                 </div>
                                                 <div className="month">
                                                     <div className="item">
-                                                        <span className="param_name">Срок кредита (месяцы) {month}</span>
+                                                        <span
+                                                            className="param_name">Срок кредита (месяцы) {month}</span>
                                                         <Slider
                                                             min={1}
                                                             max={12}
@@ -253,25 +257,35 @@ const Calculator = () => {
                                                     </div>
                                                 </div>
                                                 <span className="param_name" onClick={handleShowList}>
-                                                    <Icon path="list"/>
-                                                    Ежемесячный платеж:
-                                                    <Icon path="downArrow" className="month_payment_sum"/>
-                                                    <span className="month-payment">
-                                                        {String(Math.round(creditView)).replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ")}
-                                                        &nbsp;сум
-                                                    </span>
+                                                    <div className="item month-payment_content">
+                                                        <div className="icon-bubble">
+                                                            <Icon path="list"/>
+                                                        </div>
+                                                        <div className="inner">
+                                                            Ежемесячный платеж
+                                                            <span className="month-payment">
+                                                                {String(Math.round(creditView)).replace(/(\d)(?=(\d{3})+(\D|$))/g, "$1 ")}
+                                                                &nbsp;сум
+                                                            </span>
+                                                        </div>
+                                                        <Icon path="downArrow" className="month_payment_sum"/>
+                                                    </div>
                                                 </span>
-                                                    <span className="param_name">
-                                                    <Icon path="percent"/>
-                                                    Процентная ставка:
-                                                    <span>23%</span>
+                                                <span className="param_name">
+                                                    <div className="item total-percent">
+                                                        <div className="icon-bubble">
+                                                            <Icon path="percent"/>
+                                                        </div>
+                                                        Процентная ставка:
+                                                        <span>23%</span>
+                                                    </div>
                                                 </span>
                                             </div>
 
                                             <div className="typePayment">
-                                            <span className="param_name">
-                                                Вид платежа:
-                                            </span>
+                                                <span className="param_name">
+                                                    Вид платежа:
+                                                </span>
                                                 <div className="typeContent">
                                                     <Select
                                                         defaultValue="annuity"
@@ -310,7 +324,7 @@ const Calculator = () => {
                                                 onClick={onFinish}
                                                 className="next-btn"
                                             >
-                                                Отправить заявку
+                                                Далее
                                             </Button>
                                         </div>
                                     </>

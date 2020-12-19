@@ -1,0 +1,25 @@
+@import "src/css/variables";
+
+.successRequest {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: $bgColor;
+
+  .content {
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    top: -90px;
+    height: fit-content;
+    right: 0;
+
+    h3{
+      font-size: 36px;
+      margin-bottom: 0;
+    }
+  }
+}

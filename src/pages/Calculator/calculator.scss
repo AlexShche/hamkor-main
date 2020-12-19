@@ -2,22 +2,61 @@
 
 .calculator {
   background: $bgColor;
+  position: relative;
   padding-top: 78px;
+  min-height: 760px;
   height: 100%;
 
   form {
 
-    .title{
+    .title {
       padding: 0 16px;
     }
 
-    .item{
+    .item {
+      width: 100%;
       border-radius: $middleBorderRadius;
       padding: 12px;
       background: #fff;
 
-      .param_name{
+      .param_name {
         margin-top: 0 !important;
+      }
+    }
+
+    .total-percent {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+    }
+
+    .month-payment_content {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+
+      .month_payment_sum {
+        margin-left: auto;
+        width: 12px !important;
+        height: 12px !important;
+        transform: rotate(-90deg);
+        margin-right: 4px !important;
+        fill: $defaultColor !important;
+        opacity: .5;
+      }
+    }
+
+    .params .param_name .icon-bubble {
+      margin-right: 10px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      background: $mainYellow;
+      border-radius: 50%;
+
+      svg {
+        margin: auto;
+        fill: #fff;
       }
     }
 
@@ -26,12 +65,11 @@
       font-size: 15px;
 
       .ant-select-selector {
-        padding-left: 20px;
-        height: 52px;
+        padding-left: 0;
+        height: 30px;
         display: flex;
         align-items: center;
-        border-radius: 12px;
-        background: $lightBlue;
+        background: transparent;
         border: 1px solid transparent;
       }
     }
@@ -58,6 +96,10 @@
         align-items: center;
         width: 100%;
         height: 32px;
+
+        input {
+          padding-left: 0;
+        }
 
         input::placeholder {
           color: #CDD4D9;
@@ -108,22 +150,23 @@
         }
 
         .month-payment {
+          margin-top: 4px;
+          display: block;
           margin-left: auto;
           font-weight: $bold;
           color: $mainGreen;
-          font-size: 16px;
         }
       }
 
       .param_name {
-        margin-top: 16px;
+        margin-top: 4px;
       }
 
       .month {
         margin-top: 14px;
 
         .param_name {
-          margin-bottom: 24px;
+          margin-bottom: 16px;
         }
 
         .ant-radio-group {
@@ -183,18 +226,21 @@
     }
 
     .typePayment {
-      margin: 14px 0 6px;
-      padding: 14px 16px 0;
+      margin: 4px 14px 6px;
       border-top: 1px solid $lightBlue;
+      border-radius: $middleBorderRadius;
+      padding: 12px;
+      background: #fff;
 
       .typeContent {
         margin-top: 8px;
         position: relative;
 
         svg {
-          fill: $mainGreen;
-          width: 14px;
-          height: 8px;
+          fill: $defaultColor;
+          opacity: .5;
+          width: 12px;
+          height: 12px;
           position: absolute;
           right: 16px;
           top: 0;
@@ -203,16 +249,20 @@
         }
       }
 
-      .param_name svg {
-        width: 20px;
-        height: 20px;
-        //fill: $iconColor;
-        margin-right: 10px;
+      .param_name {
+        font-weight: $bold;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          //fill: $iconColor;
+          margin-right: 10px;
+        }
       }
     }
 
     .offer {
-      padding: 10px 16px 0;
+      padding: 4px 16px 0;
       margin-bottom: 6px;
 
       label {

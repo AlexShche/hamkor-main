@@ -3,9 +3,11 @@
 .ListPayment{
   position: relative;
   height: 100%;
+  padding: 0 16px;
 
   .ant-collapse-content-box{
     p{
+      opacity: .5;
       display: flex;
       letter-spacing: -0.154px;
       color: #263D4C;
@@ -15,6 +17,19 @@
         margin-left: auto;
       }
     }
+
+    p:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .ant-collapse-item-active .month_payment_sum{
+    transform: rotate(180deg);
+  }
+
+  .month_payment_sum{
+    width: 12px;
+    height: 12px;
   }
 
   .ant-collapse {

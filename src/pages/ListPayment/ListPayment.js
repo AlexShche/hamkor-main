@@ -15,7 +15,7 @@ export const ListPayment = ({graph, list}) => {
             <Header title="График" list={() => list()}/>
             <div className="ListPayment">
                 <div className="container">
-                    <h3 className={"title"}>График платежей</h3>
+                    <h2 className={"title"}>График платежей</h2>
                     <Collapse
                         expandIconPosition={"right"}
                         expandIcon={({ isActive }) => (
