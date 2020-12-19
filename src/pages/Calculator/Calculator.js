@@ -27,7 +27,7 @@ const Calculator = () => {
     const [month, setMonth] = useState(3)
     const [typePayment, setTypePayment] = useState("annuity")
     const [creditView, setCreditView] = useState(796229)
-    const [success, setSuccess] = useState(true)
+    const [success, setSuccess] = useState(false)
     const [creditId, setCreditId] = useState(0)
     const [loading, setLoading] = useState(false)
     const [creditInputLetter, setCreditInputLetter] = useState(false)
