@@ -1,47 +1,96 @@
 @import "src/css/variables";
 
-footer{
+footer {
   padding: 10px 12px 24px;
   position: fixed;
   background: #fff;
   bottom: 0;
   width: 100%;
+  z-index: 9999;
 
-  ul{
+  ul {
     padding: 0;
     margin: 0;
     list-style: none;
     display: flex;
     align-items: center;
 
-    .active{
+    .active {
 
-      a{
+      a {
         color: $mainGreen;
       }
 
-      svg{
+      svg {
         fill: $mainGreen
       }
     }
 
-    li{
+    li {
       text-align: center;
       width: 100%;
+      font-size: $smallerFontSize;
+      font-weight: 500;
     }
 
-    a{
+    a {
       font-size: $smallerFontSize;
       font-weight: 500;
       color: $defaultColor
     }
   }
 
-  svg{
-    margin: auto;
+  svg {
     display: block;
     fill: $defaultColor;
-    width: 18px;
-    height: 18px;
+    margin: auto auto 2px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.menu-modal {
+  top: unset !important;
+  position: fixed !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  bottom: 70px;
+  padding-bottom: 0 !important;
+
+  .ant-modal-content {
+    border-radius: $middleBorderRadius $middleBorderRadius 0 0;
+    background: #F7F6F8;
+
+    .ant-modal-body {
+      padding: 16px;
+
+      .list-catalog{
+
+        .list-catalog_card{
+          text-align: center;
+          padding: 14px 8px;
+          background: #fff;
+          border-radius: $middleBorderRadius;
+          font-size: 10px;
+          line-height: 12px;
+
+          p{
+            margin-bottom: 0;
+          }
+
+          a{
+            color: #000;
+          }
+
+          svg{
+            margin-bottom: 8px;
+            fill: $mainGreen;
+            width: 34px;
+            height: 34px;
+          }
+        }
+      }
+    }
   }
 }

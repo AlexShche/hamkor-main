@@ -13,7 +13,7 @@ import "./main-page.scss"
 const Main = () => {
     return (
         <>
-            <Header />
+            <Header/>
             <div className="main-page">
                 <h1>Главная</h1>
                 <TabsCards/>

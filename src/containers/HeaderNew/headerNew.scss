@@ -1,0 +1,45 @@
+@import "src/css/variables";
+
+.header-new{
+  padding: 16px;
+  color: #fff;
+  background: $mainGreen;
+
+  h5{
+    font-size: $defaultFontSize;
+    margin-bottom: 0;
+    color: #fff;
+  }
+
+  .icons{
+
+    svg{
+      opacity: .7;
+      display: flex;
+      width: 12px;
+      height: 6px;
+      margin-bottom: 2px;
+    }
+
+    svg:last-child{
+      transform: rotate(180deg);
+    }
+  }
+
+  .sum-content{
+    display: flex;
+    align-items: center;
+
+    .sum{
+      font-size: $bigFontSize;
+      font-weight: $bold;
+
+      svg{
+        opacity: .7;
+        width: 14px;
+        height: 12px;
+        fill: #fff;
+      }
+    }
+  }
+}

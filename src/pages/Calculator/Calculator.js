@@ -69,9 +69,7 @@ const Calculator = () => {
     }
 
     const result = (paramMonth, paramCredit, typeCredit) => {
-
         const type = typeof paramCredit
-
         if (typeCredit === "annuity" && type === "number") {
             const percent = Number((23 / 12).toFixed(4)) / 100
             const numerator = Number((percent * Math.pow((1 + percent), paramMonth)).toFixed(7))
@@ -84,7 +82,6 @@ const Calculator = () => {
             setCreditView(Math.round(mainMonthlyDebt + differentiatedPercent))
         }
     }
-
     const handleInputCreditChange = e => {
         !Number(e) ? setCreditInputLetter(true) : setCreditInputLetter(false)
         e > 22300000 || e < 2300000 ? setCreditInputInvalid(true) : setCreditInputInvalid(false)
@@ -92,7 +89,6 @@ const Calculator = () => {
         result(month, e, typePayment)
         setCredit(e)
     }
-
     const handleShowList = () => {
         if (typePayment === "annuity") {
             for (let i = 0; i < month; i++) {
@@ -200,9 +196,7 @@ const Calculator = () => {
 
     return (
         <>
-            {
-                !showList && (!success && <Header title="Онлайн кредит" linkBack="/catalog"/>)
-            }
+            {!showList && (!success && <Header title="Онлайн кредит" linkBack="/"/>)}
             <div className={`${success ? "" : "calculator"}`}>
                 {
                     success ? <Success creditId={creditId}/> :
